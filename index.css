@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  background-color: #002B36;
+  margin: 0;
+}
+body .slideout-menu {
+  background-color: #00212B;
+  position: fixed;
+  height: 100vh;
+  color: #CCCCC1;
+  width: 200px;
+  margin-left: -160px;
+  transition: all ease-in-out;
+  transition-duration: 0.3s;
+}
+body .slideout-menu .header {
+  display: flex;
+  height: 50px;
+}
+body .slideout-menu .header .title {
+  flex: 1;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+body .slideout-menu .header .close {
+  display: flex;
+  width: 40px;
+}
+body .slideout-menu .header .close i {
+  margin: auto;
+  padding: 10px;
+  transform: rotate(0deg);
+  transition: all ease-in-out;
+  transition-duration: 0.3s;
+}
+body .slideout-menu .header .close:hover i {
+  color: #0096c4;
+  cursor: pointer;
+}
+body .slideout-menu .nav {
+  margin: 0;
+  padding: 0;
+}
+body .slideout-menu .nav li {
+  list-style: none;
+  display: flex;
+}
+body .slideout-menu .nav li.active a {
+  border-left: 5px solid #0083ab;
+  border-color: #0083ab;
+  color: #0083ab;
+}
+body .slideout-menu .nav li a {
+  flex: 1;
+  color: #CCCCC1;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-top-color: #000000;
+  border-bottom-color: #000000;
+  border-right: 0px;
+  padding: 10px 10px;
+  margin-left: 160px;
+  transition: all ease-in-out;
+  transition-duration: 0.3s;
+}
+body .slideout-menu .nav li a:hover {
+  border-left: 5px solid #0096c4;
+  border-color: #0096c4;
+  color: #0096c4;
+}
+body .slideout-menu .nav li a span {
+  display: none;
+}
+body .slideout-menu.open {
+  margin-left: 0px;
+}
+body .slideout-menu.open .header .close i {
+  transform: rotate(180deg);
+}
+body .slideout-menu.open .nav li a {
+  margin-left: 0px;
+}
+body .slideout-menu.open .nav li a span {
+  display: initial;
+}
+body .slideout-menu.open + .main {
+  margin-left: 200px;
+}
+body .main {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  margin-left: 40px;
+  transition: all ease-in-out;
+  transition-duration: 0.3s;
+}
+body .main .header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #004052;
+  padding-left: 10px;
+}
+body .main .content {
+  padding: 10px;
+}
